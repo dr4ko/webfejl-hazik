@@ -8,4 +8,4 @@ webfejl-hazik
 
 [A harmadik feladat megoldása](http://dr4ko.github.com/webfejl-hazik/harmadik.html)
 
-[Fizzbizzbuzz feladat es teszteles](http://dr4ko.github.com/webfejl-hazik/fizzbizzbuzz.html)
+[Fizzbizzbuzz feladat es teszteles](http://dr4ko.github.com/webfejl-hazik/03/fizzbizzbuzz.html)

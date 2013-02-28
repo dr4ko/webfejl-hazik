@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>Fizzbizzbuzz</title>
+</head>
+<body>
+
+<p></p>
+
+<script>
+
+var fbb = (function(){
+  "use strict";
+  var outputContainer;
+  var szam = 0;
+  var i = 0;
+function createNewOutput(msg) {
+    var li = document.createElement('li');
+    li.innerHTML = msg;
+    outputContainer.appendChild(li);
+  }
+  
+function fizzbizzbuzz(i){
+   szam = 0;
+    if((i%3)== 0){
+        szam = i + ' fizz';
+	}
+    if((i%5)== 0){
+        szam = i + ' bizz';
+	}
+    if((i%7)== 0){
+         szam = i + ' buzz';
+	}
+    if((i%3)== 0 && (i%5)==0){
+         szam = i + ' fizzbizz';
+	}
+    if((i%3)== 0 && (i%7)==0){
+         szam = i + ' fizzbuzz';
+	}
+    if((i%7)== 0 && (i%5)==0){
+        szam = i + ' bizzbuzz';
+	}
+    if((i%3)== 0 && (i%5)==0 && (i%7)==0){
+         szam = i + ' fizzbizzbuzz';
+	}
+    if(szam == 0){
+         szam = i + ' ' + i;
+	}
+	return szam;
+}
+     
+function kiIr(){
+
+           for (i = 1; i <= 100; i++) {
+                fizzbizzbuzz(i);   
+                createNewOutput(szam);
+            }    
+    
+  } 
+
+  function setUp() {
+    outputContainer = document.getElementById('output');
+    kiIr();
+  }
+  return setUp;
+})();
+
+document.addEventListener('DOMContentLoaded', fbb);
+
+</script>
+<body onload="fbb.setUp();">
+<ul id="output"></ul>
+</body>
+</html>
